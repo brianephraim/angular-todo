@@ -1,0 +1,156 @@
+body{
+  xbackground:url('../img/app-design.jpg') no-repeat 0 0 transparent;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+}
+
+.todo{
+  xopacity:.4;
+  width:300px;
+  border:1px solid #dddddd;
+  margin:36px 0 0 37px;
+  min-height: 452px;
+  background:#dddddd;
+  background-image: -webkit-linear-gradient(top, #fafafa 0px, #dddddd 63px, #dddddd 100%);
+  background-image: -moz-linear-gradient(top, #fafafa 0px, #dddddd 63px, #dddddd 100%);
+  background-image: -o-linear-gradient(top, #fafafa 0px, #dddddd 63px, #dddddd 100%);
+  background-image: -ms-linear-gradient(top, #fafafa 0px, #dddddd 63px, #dddddd 100%);
+  background-image: linear-gradient(top, #fafafa 0px, #dddddd 63px, #dddddd 100%);
+
+}
+.todo input{
+  margin:0;
+  padding:0;
+}
+.todo h2{
+  background:url('../img/sprite.png') no-repeat 0 0 transparent;
+  text-indent: -9999px;
+  width:94px;
+  height:36px;
+  margin:16px auto 0;
+}
+.todo .tabs{
+  padding:12px 0 21px 14px;
+  position:relative;
+  height:43px;
+}
+.todo .tabs:after{
+  content: '';
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0px;
+  background: url('../img/sprite.png') no-repeat 0px -36px transparent;
+  left: 0;
+}
+.todo .tabs li{
+  float:left;
+  border:1px solid #ccc;
+  border-bottom-color: #f7f7f7;
+  width:89px;
+  height:100%;
+  line-height:43px;
+  text-align:center;
+  cursor:pointer;
+  background:#ececec;
+  background-image: -webkit-linear-gradient(top, #fefefe 0%,#dddddd 100%);
+  background-image: -moz-linear-gradient(top, #fefefe 0%,#dddddd 100%);
+  background-image: -o-linear-gradient(top, #fefefe 0%,#dddddd 100%);
+  background-image: -ms-linear-gradient(top, #fefefe 0%,#dddddd 100%);
+  background-image: linear-gradient(top, #fefefe 0%,#dddddd 100%);
+  
+}
+.todo .tabs li span{
+  font-size:.8em;
+}
+.todo .tabs li:first-child{
+  border-radius:7px 0 0 7px;
+}
+.todo .tabs li:last-child{
+  border-radius:0 7px 7px 0;
+}
+.todo .tabs li.selected{
+  background:#ddd;
+}
+.todo .newInput{
+  margin: 9px 0 0 14px;
+  border: 1px solid #ccc;
+  width: 271px;
+  height: 45px;
+  border-radius: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+
+}
+.todo .listing{
+  padding:13px 0 0 14px;
+}
+
+.todo .listing li{
+  padding-bottom:5px;
+}
+.todo .listing .inputWrap{
+  overflow:hidden;
+  height:45px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.todo .listing input{
+  width:100%;
+  padding:17px 10px 13px 11px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  border:none;
+}
+.todo .listing input:focus{}
+
+.todo .completeButton{
+  float:left;
+  position:relative;
+  width:45px;
+  height:45px;
+  background-color:#bbbbbb;
+  border-radius:7px 0 0 7px;
+  cursor:pointer;
+}
+.todo .completeButton:after{
+  content: '';
+  width: 27px;
+  height: 27px;
+  background: url('../img/sprite.png') no-repeat -94px 0px transparent;
+  position: absolute;
+  left: 9px;
+  top: 12px;
+}
+
+.todo .completed .completeButton{
+  background-color:#6fbf44;
+}
+.todo .deleteButton{
+  position:relative;
+  float:right;
+  width:30px;
+  height:45px;
+  background:#fff;
+  margin-right:15px;
+  border-radius:0 7px 7px 0;
+  border:1px solid #ccc;
+  border-left:none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+
+.todo li:hover .deleteButton{
+  background: url('../img/sprite.png') no-repeat -120px 14px #fff;
+}
+.todo .deleteButton:hover{
+  cursor:pointer;
+}
+
+.sig{
+  text-align: right;
+  padding:20px;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>godo</title>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+
+  <div class="todo" ng-controller="todoCtrl">
+    <h2>godo</h2>
+    <ul class="tabs">
+      <li ng-class="{selected: selectedTab=='all'}" ng-click="setTab('all')">All <span>({{(list | filter:{}).length}})</span></li>
+      <li ng-class="{selected: selectedTab=='active'}" ng-click="setTab('active')">Active <span>({{(list | filter:{completed:false}).length}})</span></li>
+      <li ng-class="{selected: selectedTab=='complete'}" ng-click="setTab('complete')">Complete <span>({{(list | filter:{completed:true}).length}})</span></li>
+    </ul>
+    <input placeholder="What needs to be done?" class="newInput" ng-enter="createItem(newInput)" ng-model="newInput" />
+    <ul class="listing">
+      <li ng-repeat="item in list | filter:filterCondition" ng-class="{completed: item.completed==true}">
+        <div class="deleteButton" ng-click="delete(item)"></div>
+        <div class="completeButton" ng-click="complete(item)"></div>
+        <div class="inputWrap">
+          <input ng-model="item.text" ng-enter="updateItem(item,item.text)" ng-blur="updateItem(item,item.text)" ng-dblclick="makeEditable(item)" ng-readonly="item != doubleClickedItem" /> 
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <p class="sig">Built by Brian Ephraim</p>
+  
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/ngStorage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
